@@ -1,0 +1,14 @@
+rules_version = '2';
+
+// Craft rules based on data in your Firestore database
+// allow write: if firestore.get(
+//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
+service firebase.storage {
+  match /b/{bucket}/o {
+    // すべてのパスに対してのルールを設定
+    match /{allPaths=**} {
+      // 認証されていないすべてのユーザーに対して、ファイルをアップロードできるように許可
+      allow read, write: if true;  // すべてのユーザーが読み書きできる
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-ob-reg {
+    @apply font-obviously-display font-normal;
+  }
+  .font-ob-nar {
+    @apply font-obviously-narrow font-semibold uppercase;
+  }
+  .font-ob-nar-b {
+    @apply font-obviously-narrow font-bold uppercase;
+  }
+}
+
+:root {
+  --gm: 16px;
+}
+.clip-0 {
+  clip-path: inset(0 0 0 0);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fefefe;
+}
+
+.init-load body {
+  height: 100vh;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .no-touch body {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.scroll-content {
+  height: 100vh;
+}
+.pin-spacer {
+  pointer-events: none;
+}
+
+.scrollbar-track-y {
+  display: none !important ;
+}
+.anime {
+  transform: translate3d(0, 0, 0);
+}
+
+.anime2 {
+  will-change: transform;
+  will-change: top, left, opacity, margin, padding, width, height, transform;
+}
+.prose ol li::before {
+  content: counter(table-ol) "." !important;
+}
+.prose ol li {
+  display: table-row;
+  counter-increment: table-ol;
+}
