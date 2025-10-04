@@ -26,7 +26,7 @@ export default async function ProductCategory({
     b = new Date(b.date);
     return a > b ? -1 : a < b ? 1 : 0;
   });
-  const productNameArr: string[] = ["zensnack", "crisps"];
+  const productNameArr: string[] = ["crisps", "zensnack"];
   const productMap = new Map();
   items.map(function (item: any) {
     let category = Site.getFixedProductCategory(item.productCategory);

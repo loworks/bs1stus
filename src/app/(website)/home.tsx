@@ -1,4 +1,5 @@
 import IndexAbout from "./sections/IndexAbout";
+import IndexHeader from "./sections/IndexHeader";
 import IndexHeader2 from "./sections/IndexHeader2";
 import IndexJournal from "./sections/IndexJournal";
 import IndexPress from "./sections/IndexPress";
@@ -12,7 +13,7 @@ export default function Home() {
       data-color={"#fefefe"}
       className="md:space-y-[10vw]"
     >
-      <IndexHeader2 />
+      <IndexHeader />
       <IndexAbout />
       <IndexShop />
       <IndexJournal />
