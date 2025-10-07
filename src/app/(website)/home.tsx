@@ -4,7 +4,6 @@ import IndexHeader2 from "./sections/IndexHeader2";
 import IndexJournal from "./sections/IndexJournal";
 import IndexPress from "./sections/IndexPress";
 import IndexShop from "./sections/IndexShop";
-
 export default function Home() {
   return (
     <main
