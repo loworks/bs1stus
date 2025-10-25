@@ -3,6 +3,7 @@
 import React from "react";
 import * as Atoms from "@/components/Atoms";
 import Image from "next/image";
+import { TransitionLink } from "@/Libs/Transitions";
 export default function BetterforYou({ className }: { className?: string }) {
   return (
     <section className="pb-[10vw]">
@@ -28,24 +29,28 @@ export default function BetterforYou({ className }: { className?: string }) {
           </ul>
         </div>*/}
         <div className="relative col-[1/25] row-[1/span_20]">
-          <Image
-            src={"/btb-package1.webp"}
-            alt={"mtn-nba01"}
-            width={2400}
-            height={1600}
-            className={`h-full w-full object-cover`}
-            priority
-          />
+          <TransitionLink href="/shop/better-than-butter-solted/">
+            <Image
+              src={"/btb-package1.webp"}
+              alt={"mtn-nba01"}
+              width={2400}
+              height={1600}
+              className={`h-full w-full object-cover`}
+              priority
+            />
+          </TransitionLink>
         </div>{" "}
         <div className="relative col-[25/-1] row-[1/span_20]">
-          <Image
-            src={"/btb-package2.webp"}
-            alt={"mtn-nba02"}
-            width={2400}
-            height={1600}
-            className="h-full w-[100%] object-cover"
-            priority
-          />
+          <TransitionLink href="/shop/better-than-butter-solted/">
+            <Image
+              src={"/btb-package2.webp"}
+              alt={"mtn-nba02"}
+              width={2400}
+              height={1600}
+              className="h-full w-[100%] object-cover"
+              priority
+            />
+          </TransitionLink>
         </div>
       </article>
     </section>
