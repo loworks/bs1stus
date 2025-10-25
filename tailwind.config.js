@@ -40,6 +40,8 @@ module.exports = {
         }
       },
       colors: {
+         'butter-color': '#fffabe',
+        'butter-bg-color': '#009565',
         'crisps-color': '#fffabc',
         'crisps-color2': '#e3e773',
         'crisps-bg-color': '#8b5c41',

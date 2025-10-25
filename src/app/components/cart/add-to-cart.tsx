@@ -83,7 +83,7 @@ export function AddToCart({
         });
       }}
       className={clsx(
-        "product-pin add-cart-button pointer-events-auto bottom-0 right-0 w-screen bg-[#8b5c41] p-4 tracking-wide text-[#fff] hover:opacity-90 max-md:sticky md:absolute md:z-[1000] [html.product-crisps_&]:bg-crisps-bg-color [html.product-crisps_&]:text-crisps-color [html.product-zensnack_&]:bg-zensnack-bg-color [html.product-zensnack_&]:text-zensnack-color",
+        "product-pin add-cart-button pointer-events-auto bottom-0 right-0 w-screen bg-[#8b5c41] p-4 tracking-wide text-[#fff] hover:opacity-90 max-md:sticky md:absolute md:z-[1000] [html.product-betterthanbutter_&]:bg-[#009565] [html.product-crisps_&]:bg-crisps-bg-color [html.product-crisps_&]:text-crisps-color [html.product-zensnack_&]:bg-zensnack-bg-color [html.product-zensnack_&]:text-zensnack-color",
         {
           /*
           "cursor-not-allowed opacity-60 hover:opacity-60":

@@ -84,7 +84,7 @@ export default async function ProductListCat({
             <div className="relative aspect-[4/5]">
               <Atoms.ProductCategoryImage
                 media={media}
-                className="object-cover"
+                className="aspect-[4/5] object-cover"
                 index={i}
               />
             </div>

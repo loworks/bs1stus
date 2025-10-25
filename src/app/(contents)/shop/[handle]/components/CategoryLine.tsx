@@ -17,9 +17,11 @@ export default function CategoryLine({ className }: { className?: string }) {
       setCategory("crisps");
     } else if (htmlClassList.contains("product-zensnack")) {
       setCategory("zensnack");
+    } else if (htmlClassList.contains("product-betterthanbutter")) {
+      setCategory("betterthanbutter");
     }
   }, [isInit]);
-
+  console.log("category -- ", category);
   return !category ? (
     <></>
   ) : category === "crisps" ? (
@@ -29,6 +31,18 @@ export default function CategoryLine({ className }: { className?: string }) {
         <>Real Ingredients. Real Impact. Real Ingredients. Real Impact.</>
       }
       spNode={<>Real Ingredients. Real Impact. </>}
+    />
+  ) : category === "betterthanbutter" ? (
+    <WaveHeader
+      className="z-10 [&_.div-bg]:bg-[#fffabe] [&_.svg-fill]:fill-[#fffabe] [&_.text]:translate-y-[4px]"
+      strokeColor={"#009565"}
+      pcNode={
+        <>
+          Better food. Better future. Better humans. Better food. Better future.
+          Better humans.
+        </>
+      }
+      spNode={<>Better food. Better future. Better humans. </>}
     />
   ) : (
     <WaveHeader

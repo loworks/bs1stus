@@ -7,6 +7,7 @@ import Image from "next/image";
 import { getAllShop } from "@/Libs/contentful/api";
 import { Site } from "../utils";
 import { LineCrisps, LineZenSnack } from "../Atoms";
+import LineButter from "../Atoms/LineButter";
 
 export default async function ProductCategory({
   className,
@@ -26,7 +27,7 @@ export default async function ProductCategory({
     b = new Date(b.date);
     return a > b ? -1 : a < b ? 1 : 0;
   });
-  const productNameArr: string[] = ["crisps", "zensnack"];
+  const productNameArr: string[] = ["crisps", "zensnack", "betterthanbutter"];
   const productMap = new Map();
   items.map(function (item: any) {
     let category = Site.getFixedProductCategory(item.productCategory);
@@ -52,8 +53,10 @@ export default async function ProductCategory({
             >
               {name === "zensnack" ? (
                 <LineZenSnack className="absolute top-0 z-[10] grid w-full overflow-hidden" />
-              ) : (
+              ) : name === "crisps" ? (
                 <LineCrisps className="absolute top-0 z-[10] grid w-full overflow-hidden bg-crisps-bg-color pb-[3px]" />
+              ) : (
+                <LineButter className="bg-butter-bg-color absolute top-0 z-[10] grid w-full overflow-hidden pb-[3px]" />
               )}
 
               <Modules.ProductListCat items={items} />

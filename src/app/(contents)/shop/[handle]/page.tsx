@@ -386,8 +386,10 @@ export default async function ProductPage({ params }) {
         <section>
           {productCategory === "zensnack" ? (
             <ContentZenSnack />
-          ) : (
+          ) : productCategory === "crisps" ? (
             <ContentCrisps />
+          ) : (
+            <></>
           )}
         </section>
 
