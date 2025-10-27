@@ -201,15 +201,18 @@ export default function OverlayMenuCsr({
                         >
                           <span>CRISPS SERIES</span>
                         </TransitionLink>
-                        <Link
+                        <TransitionLink
+                          useActiveLink={true}
                           className={
                             "font-ob-nar-b !block whitespace-nowrap uppercase max-md:text-[6vw] md:text-[min(3vw,3.5vh)]"
                           }
-                          target="_new"
                           href={"/products/better-than-butter/"}
+                          cleckHandler={() => {
+                            handleClose();
+                          }}
                         >
                           <span>Better Than Butter</span>
-                        </Link>
+                        </TransitionLink>
                       </div>
                     </div>
 
