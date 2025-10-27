@@ -8,7 +8,7 @@ export default function BetterforYou({ className }: { className?: string }) {
   return (
     <section className="pb-[10vw]">
       <article
-        className={`grid grid-flow-dense auto-rows-[1.9583vw] grid-cols-[repeat(48,1fr)] max-md:mx-[16px] max-md:gap-1 max-md:pt-[58vw] md:mx-[25px] md:gap-4`}
+        className={`grid grid-flow-dense auto-rows-[1.9583vw] grid-cols-[repeat(48,1fr)] max-md:mx-[16px] max-md:gap-1 md:mx-[25px] md:gap-4`}
       >
         {/*  <div className="h-full space-y-4 max-md:col-[1/-1] max-md:row-[1/span_1] max-md:mt-[-58vw] max-md:text-[3.6vw] md:col-[13/-1] md:row-[23/span_5]">
          <div>
