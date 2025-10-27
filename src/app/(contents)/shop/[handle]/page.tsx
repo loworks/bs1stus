@@ -20,6 +20,7 @@ import { ProductCategory } from "@/components/Organisms";
 import { WaveHeader } from "@/components/Atoms";
 import { isAuthenticated } from "@/components/utils/checkAuth";
 import ReviewSection from "./sections/ReviewSection";
+import ContentBetterThanButter from "./sections/ContentBetterZanButter";
 export async function generateStaticParams() {
   // プレビュー用フラグを環境変数に基づいて設定
   const preview = process.env.NODE_ENV === "development";
@@ -380,7 +381,7 @@ export default async function ProductPage({ params }) {
           />
         </div>
         <ReviewSection
-          className="[html.product-crisps_&]:bg-crisps-color2 [html.product-zensnack_&]:bg-zensnack-color"
+          className="[html.product-betterthanbutter_&]:bg-butter-color [html.product-crisps_&]:bg-crisps-color2 [html.product-zensnack_&]:bg-zensnack-color"
           productId={handle}
         />
         <section>
@@ -389,7 +390,7 @@ export default async function ProductPage({ params }) {
           ) : productCategory === "crisps" ? (
             <ContentCrisps />
           ) : (
-            <></>
+            <></> // <ContentBetterThanButter />
           )}
         </section>
 

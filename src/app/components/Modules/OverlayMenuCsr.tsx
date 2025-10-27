@@ -206,7 +206,7 @@ export default function OverlayMenuCsr({
                             "font-ob-nar-b !block whitespace-nowrap uppercase max-md:text-[6vw] md:text-[min(3vw,3.5vh)]"
                           }
                           target="_new"
-                          href={"/btb.pdf"}
+                          href={"/products/better-than-butter/"}
                         >
                           <span>Better Than Butter</span>
                         </Link>
