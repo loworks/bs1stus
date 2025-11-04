@@ -44,7 +44,7 @@ export default function ProductList({
                 <div className="relative aspect-[4/5]">
                   <Atoms.ProductCategoryImage
                     media={item.mediasCollection.items[0]}
-                    className="object-cover"
+                    className="aspect-[4/5] object-cover"
                     index={i}
                   />
                 </div>

@@ -85,6 +85,7 @@ export default function ButterPage() {
           </div>
           <div className="relative max-md:space-y-8 md:space-y-8">
             <Circle96Percent className="absolute left-[50%] z-[1000] translate-x-[-50%] translate-y-[-50%]" />
+
             <Image
               className={
                 "scroll-anim relative top-0 z-10 object-contain max-md:aspect-[3/4] max-md:object-cover md:h-full md:w-full"

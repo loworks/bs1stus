@@ -390,7 +390,7 @@ export default async function ProductPage({ params }) {
           ) : productCategory === "crisps" ? (
             <ContentCrisps />
           ) : (
-            <></> // <ContentBetterThanButter />
+            <ContentBetterThanButter />
           )}
         </section>
 
