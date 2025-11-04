@@ -48,13 +48,13 @@ export default function Footer(props: React.ComponentProps<"footer">) {
                 <Atoms.SvgElements.IconIg className="h-[32px] fill-black" />
               </Link>
               <Link
-                href={"https://bsky.app/profile/brownsugar1st.bsky.social"}
+                href={"https://www.tiktok.com/@brownsugar1st"}
                 target="_new"
               >
                 <Image
                   className="h-[32px] w-auto"
-                  src="/logo-bluesky.svg"
-                  alt="bluesky-logo"
+                  src="/logo-tiktok.svg"
+                  alt="tiktok-logo"
                   width={600}
                   height={530}
                 />
