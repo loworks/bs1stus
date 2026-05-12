@@ -12,6 +12,7 @@ export default async function TagNavigation({ preview }: { preview: boolean }) {
       acc: { groupedTags: Record<string, any[]>; groupNames: string[] },
       tag: any,
     ) => {
+      if (!tag.group) return acc;
       if (!acc.groupedTags[tag.group]) {
         acc.groupedTags[tag.group] = [];
         acc.groupNames.push(tag.group);

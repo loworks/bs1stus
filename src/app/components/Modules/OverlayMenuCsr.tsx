@@ -89,6 +89,7 @@ export default function OverlayMenuCsr({
       acc: { groupedTags: Record<string, any[]>; groupNames: string[] },
       tag: any,
     ) => {
+      if (!tag.group) return acc;
       if (!acc.groupedTags[tag.group]) {
         acc.groupedTags[tag.group] = [];
         acc.groupNames.push(tag.group);
@@ -281,7 +282,7 @@ export default function OverlayMenuCsr({
                     {groupedTags[group].map((tag: any) => (
                       <li key={tag.slug} className="leading-[1]">
                         <TransitionLink
-                          href={`/bs1st`}
+                          href={`/${group.toLowerCase()}/${tag.slug}`}
                           useActiveLink={true}
                           className="font-ob-nar-b"
                         >

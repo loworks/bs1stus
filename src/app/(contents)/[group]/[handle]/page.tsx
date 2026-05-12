@@ -13,12 +13,12 @@ import { TagNavigation } from "@/components/Modules";
 export async function generateStaticParams() {
   const tags: any = await getAllTags(false); // タグデータを取得
 
-  return tags.map((tag: { group: string; slug: string }) => {
-    return {
+  return tags
+    .filter((tag: { group: string; slug: string }) => tag.group)
+    .map((tag: { group: string; slug: string }) => ({
       group: tag.group.toLowerCase(),
       handle: tag.slug,
-    };
-  });
+    }));
 }
 
 export const generateMetadata = async ({
@@ -33,7 +33,7 @@ export const generateMetadata = async ({
 
   const post: any = await getTag(handle, preview);
   const postGroupLower = post?.group?.toLowerCase();
-  if (!post || post.group.toLowerCase() !== group.toLowerCase()) {
+  if (!post || !postGroupLower || postGroupLower !== group.toLowerCase()) {
     return notFound(); // 一致しない場合は404
   }
   const canonicalUrl = `https://https://brownsugar1st.store//${group}/${handle}`;
