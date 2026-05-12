@@ -103,7 +103,7 @@ export default async function JournalDetail({ params }) {
                   </h1>
                   <div className="flex items-center space-x-2 py-2">
                     {post.tagsCollection.items
-                      .filter((item: { group: string }) => item.group)
+                      .filter((item: { group: string } | null) => item && item.group)
                       .map(
                       (
                         item: { name: string; slug: string; group: string },

@@ -121,7 +121,7 @@ export default async function JournalCategory() {
                       className={`${item.tagsCollection.items.length > 0 ? "border-t-[1px]" : ""}`}
                     >
                       {item.tagsCollection.items
-                        .filter((tag: { group: string }) => tag.group)
+                        .filter((tag: { group: string } | null) => tag && tag.group)
                         .map(
                         (
                           item: { name: string; slug: string; group: string },
