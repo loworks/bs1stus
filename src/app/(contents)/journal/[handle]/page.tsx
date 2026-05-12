@@ -9,7 +9,6 @@ import { Buttons, SvgElements } from "@/components/Atoms";
 import Link from "next/link";
 import { TransitionLink } from "@/Libs/Transitions";
 import Video from "@/Libs/ui/Video";
-import { notFound } from "next/navigation";
 
 export const generateMetadata = async ({ params }): Promise<Metadata> => {
   const { handle } = await params;
@@ -18,7 +17,6 @@ export const generateMetadata = async ({ params }): Promise<Metadata> => {
 
   const postObj = await getJournalBySlug(handle, preview);
   const post = postObj.post;
-  if (!post) return notFound();
   return {
     title: `${post.siteTitle} | ${Site.siteName}`,
     description: `${post.siteDescription.json.content[0].content[0].value}`,
@@ -47,7 +45,6 @@ export default async function JournalDetail({ params }) {
     process.env.NODE_ENV === "development" || (await draftMode()).isEnabled;
   const postObj = await getJournalBySlug(handle, preview);
   const post = postObj.post;
-  if (!post) return notFound();
 
   return (
     <>
