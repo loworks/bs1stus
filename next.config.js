@@ -8,7 +8,10 @@ const nextConfig = {
   trailingSlash: true,
   /*output: 'export', outにアウトプットする時のみ使用*/
   experimental: {
-    serverActions: true
+    staleTimes: {
+      dynamic: 30,
+      static: 180,
+    },
   },
 
   images: {
