@@ -281,7 +281,7 @@ export default function OverlayMenuCsr({
                     {groupedTags[group].map((tag: any) => (
                       <li key={tag.slug} className="leading-[1]">
                         <TransitionLink
-                          href={`/${group.toLowerCase()}/${tag.slug}`}
+                          href={`/bs1st`}
                           useActiveLink={true}
                           className="font-ob-nar-b"
                         >
