@@ -120,7 +120,9 @@ export default async function JournalCategory() {
                     <div
                       className={`${item.tagsCollection.items.length > 0 ? "border-t-[1px]" : ""}`}
                     >
-                      {item.tagsCollection.items.map(
+                      {item.tagsCollection.items
+                        .filter((tag: { group: string }) => tag.group)
+                        .map(
                         (
                           item: { name: string; slug: string; group: string },
                           num: number,
